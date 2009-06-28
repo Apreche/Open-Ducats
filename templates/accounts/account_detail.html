@@ -1,0 +1,13 @@
+<h1>{{object.name}}</h1>
+<h2>&curren;{{ object.balance }}</h2>
+<p>{{ object.description }}</p>
+<dl>
+    <dt>owner</dt>
+    <dd>{{ object.owner }}</dd>
+    <dt>created at</dt>
+    <dd>{{ object.created_at|date:"F j, Y H:i:s"}}</dd>
+    <dt>updated at</dt>
+    <dd>{{ object.updated_at|date:"F j, Y H:i:s"}}</dd>
+    <dt>status</dt>
+    <dd>{{ object.get_status_display }}</dd>
+</dl>
