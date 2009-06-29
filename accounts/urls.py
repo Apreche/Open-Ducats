@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 
-from accounts import views,models
+from accounts import views
 
 urlpatterns = patterns('',
-    (r'^(?P<slug>[-\w]+)/$', views.account_detail),
+    url(r'^(?P<slug>[-\w]+)/$', views.account_detail, name='account_detail'),
 )

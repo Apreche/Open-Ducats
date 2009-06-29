@@ -16,3 +16,7 @@ class Account(models.Model):
         ('I', 'Inactive'),
     )
     status = models.CharField(max_length=1, choices=STATUS_OPTIONS)
+    
+    @models.permalink
+    def get_absolute_url(self):
+        return ('account_detail', (), {'slug': self.slug})
