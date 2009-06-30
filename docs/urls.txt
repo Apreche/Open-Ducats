@@ -1,0 +1,8 @@
+/ - home page
+/account/<slug>/ - account detail
+/user/<username>/ - user detail
+/transaction/<transaction_template_slug([-\w]+)>/ - translation log of type
+/transaction/<id(\d+)>/ - detail for single transaction execution
+/transaction/new/ - new transaction
+/transaction/execute/ - execute default transaction
+/transaction/execute/<transaction_template_slug>/ - execute transaction
