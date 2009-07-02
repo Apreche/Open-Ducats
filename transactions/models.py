@@ -20,6 +20,9 @@ class TransactionTemplate(models.Model):
     )
     status = models.CharField(max_length=1, choices=STATUS_OPTIONS)
 
+    def __unicode__(self):
+        return self.name
+
 class Transaction(models.Model):
     template = models.ForeignKey('TransactionTemplate')
     notes = models.TextField()
@@ -27,3 +30,6 @@ class Transaction(models.Model):
     receiver = models.ForeignKey(Account,related_name='real_receiver')
     amount = models.PositiveIntegerField()
     timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __unicode__(self):
+        return "%s %s %s:%s %s" % (self.template.name, self.timestamp, self.giver, self.receiver, self.amount )
