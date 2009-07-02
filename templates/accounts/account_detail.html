@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+{% bock titlle %}{{ Open Ducats.org
+{% block content %}
 <h1>{{object.name}}</h1>
 <h2>&curren;{{ object.balance }}</h2>
 <p>{{ object.description }}</p>
@@ -11,3 +14,4 @@
     <dt>status</dt>
     <dd>{{ object.get_status_display }}</dd>
 </dl>
+{% endblock %}

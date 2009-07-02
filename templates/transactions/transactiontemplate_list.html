@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<table>
+{% for obj in object_list %}
+<tr>
+    <td>{{ obj.name }}</td>
+    <td>{{ obj.default_giver }}</td>
+    <td>{{ obj.default_receiver }}</td>
+    <td>{{ obj.default_amount }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

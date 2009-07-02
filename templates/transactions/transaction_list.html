@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<table>
+{% for obj in object_list %}
+<tr>
+    <td>{{ obj.timestamp }}</td>
+    <td>{{ obj.giver }}</td>
+    <td>{{ obj.receiver }}</td>
+    <td>&curren;{{ obj.amount }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

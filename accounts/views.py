@@ -1,4 +1,6 @@
 from django.views.generic.list_detail import object_detail, object_list
+from django.contrib.auth.decorators import login_required
+
 from accounts.models import Account
 
 def account_detail( request, slug ):
