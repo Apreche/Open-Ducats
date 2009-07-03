@@ -1,6 +1,27 @@
 {% extends "base.html" %}
+{% block title %}Transaction Log{% endblock %}
+{% block css_extra %}
+<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/jqtable/style.css" media="screen"></link>
+{% endblock %}
+{% block javascript_extra %}
+<script type="text/javascript" src="{{MEDIA_URL}}js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#transaction_log").tablesorter();
+    });
+</script>
+{% endblock %}
 {% block content %}
-<table>
+<table id="transaction_log" class="tablesorter">
+    <thead>
+        <tr>
+            <th>Timestamp</th>
+            <th>Giver</th>
+            <th>Receiver</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
 {% for obj in object_list %}
 <tr>
     <td>{{ obj.timestamp }}</td>
@@ -9,5 +30,6 @@
     <td>&curren;{{ obj.amount }}</td>
 </tr>
 {% endfor %}
+</tbody>
 </table>
 {% endblock %}

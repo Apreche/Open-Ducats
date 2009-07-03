@@ -1,11 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-    "http://www.w3.org/TR?html4/strict.dtd">
+    "http://www.w3.org/TR/html4/strict.dtd">
 <html>
     <head>
         <title>{% block title %}{% endblock %}</title>
         {% block css %}
         {% endblock %}
+        {% block css_extra %}
+        {% endblock %}
         {% block javascript %}
+        <script type="text/javascript" src="{{MEDIA_URL}}js/jquery.js"></script>
+        {% endblock %}
+        {% block javascript_extra %}
         {% endblock %}
     </head>
     <body>
