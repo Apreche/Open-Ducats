@@ -78,8 +78,8 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django_extensions',
     'south',
-    'accounts',
-    'transactions',
+    'ducats.accounts',
+    'ducats.transactions',
 )
 
 try:

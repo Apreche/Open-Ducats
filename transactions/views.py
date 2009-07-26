@@ -1,6 +1,6 @@
 from django.views.generic.list_detail import object_list, object_detail
 
-from transactions.models import TransactionTemplate, Transaction
+from ducats.transactions.models import TransactionTemplate, Transaction
 
 def template_list(request):
     templates = TransactionTemplate.objects.all()
